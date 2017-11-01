@@ -20,10 +20,6 @@
   * [监控&日志](user-guide/log-and-monitor.md)
 * API 文档
 * SDK 文档
-* 最佳实践
-  * 日请求量百亿次的多媒体转码业务
-  * Spark大数据平台实现
-  * 机器学习训练业务
 * Q & A
   * [如何实现服务之间的访问？](q-and-a/access-between-services.md)
   * [如何使用配置集？](q-and-a/)

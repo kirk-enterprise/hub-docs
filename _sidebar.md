@@ -2,12 +2,9 @@
   * [产品介绍](introduction/product-introduction.md)
   * [基本概念](introduction/basic-concepts.md)
   * [发布版本及功能](introduction/changelog.md)
-  * [计费说明](introduction/prices.md)
   * [七牛云用户服务协议](introduction/conditions-of-use.md)
   * [容器服务等级协议](introduction/kirk-sla.md)
 * 快速实践
-  * [创建 Wordpress 应用](quick-start/create-wordpress-app.md)
-  * [创建 Mysql 应用](quick-start/create-mysql-app.md)
 * 用户指南
   * [账号注册](user-guide/registry.md)
   * [应用管理](user-guide/app.md)
@@ -21,6 +18,3 @@
 * API 文档
 * SDK 文档
 * Q & A
-  * [如何实现服务之间的访问？](q-and-a/access-between-services.md)
-  * [如何使用配置集？](q-and-a/)
-  * [如何修改服务的默认网络配置？](q-and-a/)

@@ -5,11 +5,13 @@
   * [七牛云用户服务协议](introduction/conditions-of-use.md)
   * [容器服务等级协议](introduction/kirk-sla.md)
 * 快速实践
+  * [上传本地镜像到仓库](/.md)
+  * [拉取仓库镜像到本地](/.md)
 * 用户指南
   * [账号注册](user-guide/registry.md)
-  * [仓库管理](user-guide/app.md)
-  * [镜像中心](user-guide/service.md)
-  * [镜像加速](user-guide/container.md)
-  * [个人中心](user-guide/storage.md)
+  * [仓库管理](user-guide/repository.md)
+  * [镜像管理](user-guide/image.md)
+  * [镜像中心](user-guide/image-center.md)
+  * [镜像加速](user-guide/mirror.md)
 * Q & A
-  * [如何上传本地镜像到仓库](q-and-a/.md)
+  * [常见问题](q-and-a/q-and-a.md)

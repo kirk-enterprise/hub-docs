@@ -4,7 +4,7 @@ Kubernetes的Image概念，容器应用打包的标准格式，除了包含应�
 ## 空间 {docsify-ignore}
 Kubernetes的Namespace概念，空间之间存在资源隔离，进程相互独立。
 
-## 镜像仓库 {docsify-ignore}
+## 仓库 {docsify-ignore}
 
 ## Docker Hub {docsify-ignore}
 

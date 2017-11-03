@@ -5,8 +5,8 @@
   * [七牛云用户服务协议](introduction/conditions-of-use.md)
   * [容器服务等级协议](introduction/kirk-sla.md)
 * 快速实践
-  * [上传本地镜像到仓库](/.md)
-  * [拉取仓库镜像到本地](/.md)
+  * [上传本地镜像到仓库](quick-start/push-image.md)
+  * [拉取仓库镜像到本地](quick-start/pull-image.md)
 * 用户指南
   * [账号注册](user-guide/registry.md)
   * [仓库管理](user-guide/repository.md)

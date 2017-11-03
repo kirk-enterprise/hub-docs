@@ -7,14 +7,9 @@
 * 快速实践
 * 用户指南
   * [账号注册](user-guide/registry.md)
-  * [应用管理](user-guide/app.md)
-  * [服务管理](user-guide/service.md)
-  * [容器管理](user-guide/container.md)
-  * [存储管理](user-guide/storage.md)
-  * [镜像管理](user-guide/image.md)
-  * [主机管理](user-guide/node.md)
-  * [应用市场](user-guide/app-store.md)
-  * [监控&日志](user-guide/log-and-monitor.md)
-* API 文档
-* SDK 文档
+  * [仓库管理](user-guide/app.md)
+  * [镜像中心](user-guide/service.md)
+  * [镜像加速](user-guide/container.md)
+  * [个人中心](user-guide/storage.md)
 * Q & A
+  * [如何上传本地镜像到仓库](q-and-a/.md)

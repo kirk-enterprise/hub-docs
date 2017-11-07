@@ -2,10 +2,10 @@
 
 ![logo](_media/logo-blue.png)
 
-# 七牛镜像中心文档 <small>1.0</small>
+# 七牛云镜像中心
 
-> 七牛镜像中心
+> 帮助你打造自己的容器生态
 
-- 简单·可信赖
+- 文档站 1.0
 
-[开始使用](introduction/product-introduction.md)
+[了解详情](introduction/product-introduction.md)

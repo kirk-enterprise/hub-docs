@@ -3,7 +3,6 @@
   * [基本概念](introduction/basic-concepts.md)
   * [发布版本及功能](introduction/changelog.md)
   * [七牛云用户服务协议](introduction/conditions-of-use.md)
-  * [容器服务等级协议](introduction/kirk-sla.md)
 * 快速实践
   * [上传本地镜像到仓库](quick-start/push-image.md)
   * [拉取仓库镜像到本地](quick-start/pull-image.md)

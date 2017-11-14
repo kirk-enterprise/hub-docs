@@ -1,3 +1,3 @@
-- [镜像中心](https://hub-cs.qiniu.io)
-- [控制台](https://hub-cs.qiniu.io/portal)
+- [镜像中心](https://hub.qiniu.io)
+- [控制台](https://hub.qiniu.io/portal)
 - [文档中心](/)

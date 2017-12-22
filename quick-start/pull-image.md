@@ -3,7 +3,7 @@
 本文介绍如何从七牛镜像中心拉取镜像到本地，以便在本地使用七牛镜像中心提供的镜像。
 
 
-## 1. 登录七牛镜像中心服务器
+## 1. 登录七牛镜像中心服务器 {docsify-ignore}
 
 ```
 docker login -u {你的七牛账号} -p {密码} reg.qiniu.com
@@ -12,7 +12,7 @@ docker login -u {你的七牛账号} -p {密码} reg.qiniu.com
 
 !> **注意：**如果需要拉取的是公共镜像，则无需登录。如果需要拉取的是你自己的私有镜像，则需要使用自己的账号和密码登录。
 
-## 2. 拉取镜像到本地
+## 2. 拉取镜像到本地 {docsify-ignore}
 
 ```
 docker pull reg.qiniu.com/{命名空间}/{镜像名}:{标签}
@@ -23,7 +23,7 @@ docker pull reg.qiniu.com/{命名空间}/{镜像名}:{标签}
 docker pull reg.qiniu.com/mynamespace/mynginx:mytag
 ```
 
-## 3. 查看镜像列表
+## 3. 查看镜像列表 {docsify-ignore}
 
 ```
 $ docker images

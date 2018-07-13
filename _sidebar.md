@@ -12,7 +12,6 @@
   * [镜像管理](user-guide/image.md)
   * [镜像中心](user-guide/image-center.md)
   * [镜像加速](user-guide/mirror.md)
-  * [空间管理](user-guide/namespace.md)
 * Q & A
   * [常见问题](q-and-a/q-and-a.md)
 * 联系我们

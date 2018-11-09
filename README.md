@@ -6,6 +6,6 @@
 
 > 帮助你打造自己的容器生态
 
-- 文档中心 2.0
+- 文档中心 3.2
 
 [了解详情](introduction/product-introduction.md)

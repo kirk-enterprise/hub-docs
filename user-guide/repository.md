@@ -58,34 +58,31 @@
 **5.持续构建：**用于开启仓库的持续构建功能。开启后，就可以选择需要关联的git代码仓库。
 
 **6.设置代码源：**用于关联镜像自动构建所需的git代码仓库，每个镜像仓库只能关联一个git代码仓库。<br>
-如果之前没有关联过git代码仓库，打开「持续构建」开关后，会先让你「关联github账号」。
+如果之前没有关联过git代码仓库，打开「持续构建」开关后，会先让你「关联github账号」或者「关联gitlab账号」。
 
-![镜像仓库管理主页面](_figures/user-guide/repo-ci-coderepo.jpeg)
-
-成功关联github账号后，再选择github账号下的代码仓库。至此，算是成功将镜像仓库和git代码仓库做了对接。
+成功关联github或者gitlab账号后，再选择账号下的代码仓库。至此，算是成功将镜像仓库和git代码仓库做了绑定。
 
 **7.构建规则：**镜像仓库不限制构建规则的数量，但是所有构建规则都只和「设置代码源」中约定的git代码仓库有关。
 
 ?> **类型：**branch或者tag。这个用来筛选当前规则是基于git代码仓库下的branch还是tag做构建。<br>
 **名称：**branch名称或者tag名称。其中tag名称可以用通配符定义。<br>
 **Dockerfile文件：**branch或者tag下dockerfile文件所在的路径。<br>
+**镜像构建上下文：**镜像构建上下文路径。<br>
 **版本号：**编译后，所生成镜像的版本号名称，需要保证填写的名称符合docker镜像的tag命名规则。如果不填，版本号的名称会和选择的branch名或tag名一致。<br>
 **版本覆盖：**开关开启时，如果新构建出来的镜像版本号出现同名，会对之前的镜像版本做覆盖。开关关闭时，所有构建出来镜像版本号会被加上后缀，变成`「版本号」-「git commit前7位」`，以保证每次构建出来的镜像版本都被保留。
 ***
 
 ## 3.2.2 如何实现镜像的持续构建
-镜像的持续构建，就是通过更新github代码仓库来触发新的代码自动编译成新的镜像版本，并自动推送入库。<br>
-操作如下：
-
-#### 关联github账号到平台
+### 关联github或gitlab账号到平台
 
 **1）点击控制台左边栏的「个人中心」，进入账户信息页面**
 
-**2）点击「关联账号」，关联github账号到平台**
+**2）选择需要关联的代码仓库类型(github或者gitlab)，点击「关联账号」，关联账号到平台**
 
-![镜像仓库管理主页面](_figures/user-guide/center-github-account.jpeg)
+![镜像仓库管理主页面](_figures/user-guide/center-github-account.png)
 
-**3）点击「Authorize kirk-enterperise」，将github的部分操作权限授权给平台**
+#### 关联github账号
+点击「Authorize kirk-enterperise」，将github的部分操作权限授权给平台**
 
 ![镜像仓库管理主页面](_figures/user-guide/user-repo-auth.jpeg)
 
@@ -93,16 +90,35 @@
 
 ![镜像仓库管理主页面](_figures/user-guide/repo-github-accout2.jpeg)
 
-#### 创建持续构建仓库
+#### 关联gitlab账号
+首先需要在gitlab端获取「Personal Access Token」，操作如下：
 
-**4）点击控制台左边栏的「镜像仓库」，进入仓库列表页面**
+登入gitlab控制台，点击右上角用户头像，下拉选择「Settings」
 
-**5）点击「创建新的仓库」，开始创建一个能够做持续构建镜像的仓库**
+![镜像仓库管理主页面](_figures/user-guide/gitlab-settings.png)
+
+在左边栏选择「Access Tokens」,通过填写	`Name`、`Expires at`，勾选全部的`Scopes`，生成一个Personal Access Token
+
+![镜像仓库管理主页面](_figures/user-guide/gitlab-access-tokens.png)
+
+![镜像仓库管理主页面](_figures/user-guide/gitlab-personal-access-tokens.png)
+
+获取到Personal Access Token后，在控制台填入`Gitlab地址`和`Personal Access Token`，点击确定。
+
+![镜像仓库管理主页面](_figures/user-guide/gitlab-account.png)
+
+授权成功后，可以在控制台的「个人中心」看到gitlab账号名。
+
+### 创建持续构建仓库
+
+**3）点击控制台左边栏的「镜像仓库」，进入仓库列表页面**
+
+**4）点击「创建新的仓库」，开始创建一个能够做持续构建镜像的仓库**
 仓库属性，详见[3.2.1.2 持续构建仓库](#jump1)
 
-#### 触发持续构建
+### 触发持续构建
 
-**6）持续构建的触发，都是通过github的webhook实现的。当持续构建规则中监测的branch或者tag出现更新，就会自动触发新的构建。<br>
+**5）持续构建的触发，是通过git仓库本身的webhook实现的。当持续构建规则中监测的branch或者tag出现更新，就会自动触发新的构建。<br>
 用户也可以通过点击对应规则后面的「立即构建」，手动触发构建。**
 
 **如何手动触发镜像构建？**<br>
